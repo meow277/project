@@ -1,0 +1,197 @@
+:root{
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --line-color: blue;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+/* Nav bar */
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+nav .left a{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px
+}
+nav .right a:last-child{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+nav .right a span{
+    margin-left: 5px;
+
+}
+/*section1*/
+.hero {
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+.hero .text {
+    flex: 5;
+}
+.hero .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+.hero .text h2 {
+   font-size: 35px;
+}
+.hero .text .links {
+    margin-top: 20px;
+}
+.hero .text .links a {
+    display: inline-block;
+    padding : 10px 15px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.1s;
+}
+.hero .text .links a:hover {
+    background-color:transparent;
+    border: 2px solid black;
+}
+.hero .headshot img {
+    width: 300px;
+    border-radius: 50%;
+}
+/*section2*/
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.skills-section h2 {
+    font-size: 35px;
+    text-align: center;
+}
+.skills-section .text {
+    text-align: center;
+}
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    
+}
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
+    margin: 20px;
+    padding: 10px 20px;
+    border: 2px solid blue;
+    
+}
+/*section3*/
+.contact-section{
+    padding: 0px 35px;
+    margin-bottom: 100px;  
+}
+.contact-section h2{
+    font-size: 35px;
+    text-align: center;
+}
+.contact-section .group .text{
+    font-size: 20px;
+}
+.contact-section .group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact-section .group .form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+ @media (max-width: 850px)
+{
+    /*section1*/
+    .hero .text h2 {
+        font-size:35px;
+    }
+}
+@media (max-width: 740px)
+{
+    /*section1 hero*/
+    .hero {
+        flex-direction: column-reverse;
+    
+    }
+    .hero .headshot img{
+        width: 300px;
+    }
+    
+}
+
+
+@media (max-width: 600px){
+    /* nav bar */
+    nav{
+        
+        padding: 0 20px;
+
+    }
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+
+    }
+    
+
+/*section hero*/
+.hero{
+    padding: 0 20px;
+}
+.hero .text h2{
+    font-size: 30px;
+}
+}
